@@ -1,0 +1,23 @@
+.center{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.bg-preto{
+	background-color: #000;
+}
+
+.erro{
+	color: red;
+	font-size: 40px;
+}
+
+.sucesso{
+	color: green;
+	font-size: 40px;
+}
+
+.cresce{
+	font-size: 50px;
+}
