@@ -6,7 +6,6 @@ class HelperCampos
 	private $campo_tel;
 	private $campo_email;
 	private $sorteio;
-
 	function __construct()
 	{
 		$this->$campo_tel = $_POST['telefone'];

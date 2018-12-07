@@ -2,6 +2,7 @@
 include 'php/DAO/Crud_cliente.php';
 include 'PHP/Modal/Clientes.php';
 include 'PHP/HelperCampos/Campos.php';
+include 'PHP/HelperCampos/Campos_sorteio.php';
 
 
 ?>

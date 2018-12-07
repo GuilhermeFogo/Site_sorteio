@@ -28,7 +28,6 @@
 
 	 $controler = new Controller();
 	 $controler->Valida_campo();
-	 $controler->gravarCliente();
  ?>
 			</section>
 		</div>

@@ -9,16 +9,27 @@
 	 				</div>
 	 				<br>
 	 				<div class="col-6">
-	 					<input type="submit" name="sorteia" class="btn btn-md btn-second" value="Participantes" id="numero_participantes">
+	 					<input type="submit" name="participantes" class="btn btn-md btn-second" value="Participantes" id="numero_participantes">
 	 				</div>
 	 			</form>
 	 		</section>
+
+	 		<article class="container">
+	 	<div class="row">
+	 		<section class="col-6">
+	 			<form action="#" method="post" autocomplete="off">
 	 			<?php 
 	 				include 'PHP\Controler\controller.php';
 
 	 				$controle = new Controller();
 	 				$controle->sorteio();
-	 			 ?>
+	 			 ?>	
+	 				<input type='submit' name='sorteia' value='Sorteio' class='btn btn-md btn-info'
+		id='btn_sorteio'>
+	 			</form>
+	 		</section>
+	 	</div>
+	 </article>
 	 	</div>
 	 </article>
 

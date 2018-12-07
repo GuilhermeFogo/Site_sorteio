@@ -10,17 +10,17 @@ class Crud_cliente
 		// $this->conn->getCo0_oracle();
 	}
 
-	public function AddCliente(Cliente $cliente)
+	public function AddCliente($nome,$telefone,$email)
 	{
 		try {
 			$sql ="insert into Cliente(nome,telefone,email) values(?,?,?)";
 			// arrumar o prepare
 			$prepara = $this->conn->getCon_oracle()->prepare($sql);
-			// $prepara->bindParam(1, $cliente->getNome());
-			// $prepara->bindParam(2, $cliente->geSenha());
-			// $prepara->bindParam(3, $cliente->getEmail());
+			$prepara->bindParam(1, $nome);
+			$prepara->bindParam(2, $telefone);
+			$prepara->bindParam(3, $email);
 
-			//$prepara->execulte();
+			$prepara->execulte();
 		} catch (Exception $e) {
 			echo $e;
 		}

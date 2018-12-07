@@ -24,10 +24,11 @@ class Conexao
 		try {
 			$senha ="123";
 			$usu_db ="testephp";
-			$url = "oci:dbname=xe;";
-		
+			$url = "oci:dbname=xe;host=localhost";
+
+			//$conn = oci_connect($usu_db, $senha,$url);
 			$conn = new PDO($url,$usu_db,$senha);
-			echo "OK";
+			echo "<h1>Erro Fatal</h2>";
 			return $this->conexao = $conn;
 		} catch (Exception $e) {
 			
