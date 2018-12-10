@@ -22,11 +22,16 @@
 	 				include 'PHP\Controler\controller.php';
 
 	 				$controle = new Controller();
-	 				$controle->sorteio();
+	 				$controle->campos_sorteio();
 	 			 ?>	
 	 				<input type='submit' name='sorteia' value='Sorteio' class='btn btn-md btn-info'
 		id='btn_sorteio'>
 	 			</form>
+	 		</section>
+	 		<section>
+	 			<?php 
+	 				$controle->sorteio();
+	 			 ?>
 	 		</section>
 	 	</div>
 	 </article>
