@@ -3,7 +3,7 @@
 class Controller
 {
 	private $helper;
-	private $campos_sorteios;
+	private $campo_dinamico;
 	function __construct()
 	{
 		$this->$helper = new HelperCampos();
@@ -76,14 +76,14 @@ class Controller
 // 	 				</div>
 // 	 			</form>
 // 	 		</section>";
-	public function sorteio()
+	public function campos_sorteio()
 	{
 		$quantidade =$this->$helper->getCampo_sorteio();
 		
 		if (empty($quantidade)) {
 			# code...
 		}else{
-			if ($quantidade==1 || $quantidade<-1|| $quantidade>=30) {
+			if ($quantidade==1 || $quantidade<-1|| $quantidade>=30|| $quantidade<=0) {
 			echo "<div class='container'>
 				<p class ='erro'>Tente Novamente</p>
 			</div>";
@@ -99,14 +99,18 @@ class Controller
 			echo "<input type='text' name='sorteio_email".$i."' placeholder='Email para sorteio' class='form-control' required='on'>";
 			echo "</div>";
 
-			$this->$campos_sorteios = new Campos_sorteio($i);
-		}
+			$this->$campo_dinamico = new campos_sorteio($quantidade);
+		}//for
 
-			echo "<div class='col-12'>";
-			$this->$campos_sorteios->Sortear_tudo();
-			echo "</div>";
 		}// ultimo else
 		}// primeiro else
+
+	}
+
+
+	public function sorteio()
+	{
+		$this->$campo_dinamico->Sortear_tudo();
 
 	}
 }
