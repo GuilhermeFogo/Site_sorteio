@@ -5,6 +5,7 @@ class Cliente
 	private $telefone;
 	private $email;
 	
+	
 
 	public function getNome()
 	{

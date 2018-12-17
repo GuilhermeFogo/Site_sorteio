@@ -6,8 +6,6 @@ include 'PHP/HelperCampos/Campos_sorteio.php';
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
